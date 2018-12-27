@@ -1,0 +1,11 @@
+backend:
+    image: edbizarro/gitlab-ci-pipeline-php:7.2-alpine
+    cache:
+        key: backend-cache
+        paths:
+            - .composer-cache
+    before_script:
+        - export COMPOSER_CACHE_DIR=`pwd`/.composer-cache
+        - composer global show hirak/prestissimo -q || composer global require hirak/prestissimo
+        - composer install --no-suggest
+    script: composer check

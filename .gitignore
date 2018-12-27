@@ -1,0 +1,13 @@
+/database/*.sqlite
+/node_modules/
+/public/css/
+/public/fonts/
+/public/images/
+/public/js/
+/public/mix-manifest.json
+/vendor/
+/.env
+/.php_cs
+/.php_cs.cache
+/.phpunit.result.cache
+/.phpunit.xml
